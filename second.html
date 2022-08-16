@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="social-bar">
+        <a href="https://www.facebook.com/" class="icon icon-facebook" target="_blank"></a>
+        <a href="https://www.linkedin.com/home" class="icon icon-twitter" target="_blank"></a>
+        <a href="https://www.youtube.com/" class="icon icon-youtube" target="_blank"></a>
+        <a href="https://www.instagram.com/" class="icon icon-instagram" target="_blank"></a>
+      </div>
+
+      <form>
+        <input type="text" placeholder="Escribe algo!"/>
+        <input type="submit" value="Enviar"/>
+      </form>
+</section>
+
+<section class="contenido-abajo">
+    <h3>Publicaciones:</h3>
+    <div class="Publicaciones" id="Publicaciones">
+
+    </div>
+</section>
+</body>
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-app.js";
+    import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-database.js";
+    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged} from "https://www.gstatic.com/firebasejs/9.6.0/firebase-auth.js";
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyDMX0vIOOmiJ1W5nqgr_7aHBWYg4d_v1ho",
+        authDomain: "prueba2-bf264.firebaseapp.com",
+        projectId: "prueba2-bf264",
+        storageBucket: "prueba2-bf264.appspot.com",
+        messagingSenderId: "734288416600",
+        appId: "1:734288416600:web:bb2e64c4e04abbbb475f2d",
+        measurementId: "G-075H3CCHN1"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+    const auth = getAuth();
+        
+    
+    onAuthStateChanged(auth, (user) => {
+    if (user) {
+        const activo = document.getElementsByClassName('contenido-principal').value;
+        activo.style.visibility = "hidden";
+        const uid = user.uid;
+        // ...
+    } else {
+        // User is signed out
+        // ...
+    }
+    });
+</script>
+</body>
+</html>

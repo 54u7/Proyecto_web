@@ -1,0 +1,69 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body{
+    background-color: black;
+    font-size: 2.6rem;
+    font-family: 'Fuzzy Bubbles', cursive;
+  }
+  
+  .contenido-arriba,
+  .contenido-principal,
+  .contenido-abajo{
+    background-color: white;
+  }
+  
+.contenido-arriba h1 a{
+    text-decoration: none;
+    color: black;
+}
+
+  .contenido-arriba{
+    position: relative;
+    bottom: 2rem;
+    padding-left: 5rem;
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .log-reg a{
+    text-decoration: none;
+    padding: 1rem;
+    color: black;
+    border-radius: 1rem;
+  }
+  
+  .log-reg a:hover{
+    background-color: gray;
+    transition-duration: 0.5s;
+  }
+  
+  .contenido-principal{
+    text-align: center;
+    max-width: 120rem;
+    margin: 0 auto;
+    margin-top: 5rem;
+    padding: 5rem 5rem;
+    width: 50%;
+    border-radius: 2rem;
+  }
+  
+  .contenido-abajo{
+    text-align: center;
+    max-width: 120rem;
+    margin: 0 auto;
+    margin-top: 5rem;
+    padding: 5rem 5rem;
+    width: 50%;
+    border-radius: 2rem;
+  }
+
+  .formulario-registro input{
+        
+  }
